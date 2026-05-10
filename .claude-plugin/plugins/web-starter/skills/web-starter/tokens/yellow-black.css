@@ -1,0 +1,16 @@
+/* 햄로그 톤 — 노랑 #FFD600 + 검정. 본인 default. */
+:root {
+  --bg: #0a0a0a;
+  --bg-soft: #141414;
+  --bg-card: #1a1a1a;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text: #f5f5f5;
+  --text-muted: #a3a3a3;
+  --text-dim: #737373;
+  --yellow: #FFD600;
+  --yellow-dark: #E5BD00;
+  --yellow-light: #FFEC80;
+  --yellow-deep: #FFA800;
+  --purple: #a855f7;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "autogongbang-tools",
+  "owner": {
+    "name": "오공 (오토공방)"
+  },
+  "plugins": [
+    {
+      "name": "web-starter",
+      "source": "./plugins/web-starter",
+      "description": "오토공방 내부용 웹페이지 스캐폴드 스킬"
+    }
+  ]
+}

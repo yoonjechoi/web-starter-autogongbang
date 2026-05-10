@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{TITLE}}</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet" />
+<style>
+  /* === 디자인 토큰 (web-starter/tokens/ 에서 선택) === */
+  :root {
+    --bg: #0a0a0a;
+    --bg-soft: #141414;
+    --bg-card: #1a1a1a;
+    --line: rgba(255, 255, 255, 0.08);
+    --line-strong: rgba(255, 255, 255, 0.16);
+    --text: #f5f5f5;
+    --text-muted: #a3a3a3;
+    --text-dim: #737373;
+    --yellow: #FFD600;
+    --yellow-deep: #FFA800;
+  }
+
+  /* === Reset + Base === */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* === 연속성 5법칙 적용 === */
+  /* 1. 색상 리듬 — 섹션 배경은 bg / bg-soft / bg-card 만 사용 */
+  /* 2. 수직 리듬 — 모든 섹션 padding 통일 */
+  section { padding: 80px 24px; border-bottom: 1px solid var(--line); }
+  /* 3. 그리드 통일 */
+  .container { max-width: 1080px; margin: 0 auto; position: relative; }
+  /* 4. 타이포 스케일 — H1·H2 한 페이지 통일 */
+  h1 { font-size: clamp(36px, 6vw, 60px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; }
+  h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+  /* 5. 분리·전환 — section border-bottom 으로 처리 (위) */
+
+  /* === Hero === */
+  .hero {
+    position: relative;
+    padding: 120px 24px 100px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+  }
+  .orb {
+    position: absolute; border-radius: 50%;
+    filter: blur(90px); pointer-events: none;
+  }
+  .orb-1 {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, var(--yellow) 0%, var(--yellow-deep) 40%, transparent 70%);
+    opacity: 0.18; top: -200px; right: -120px;
+  }
+  .orb-2 {
+    width: 420px; height: 420px;
+    background: radial-gradient(circle, var(--yellow-deep) 0%, #ff5500 50%, transparent 75%);
+    opacity: 0.10; bottom: -120px; left: -80px;
+  }
+
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px; border: 1px solid var(--yellow);
+    border-radius: 999px; font-size: 12px; font-weight: 600;
+    color: var(--yellow); margin-bottom: 24px;
+    background: rgba(255, 214, 0, 0.06);
+  }
+  .badge::before { content: ''; width: 6px; height: 6px; background: var(--yellow); border-radius: 50%; }
+  .accent { color: var(--yellow); }
+  .lede { font-size: 17px; color: var(--text-muted); max-width: 640px; margin: 20px 0 32px; }
+
+  /* === 섹션 메타 === */
+  .section-num {
+    display: inline-block; font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; color: var(--yellow);
+    margin-bottom: 12px; letter-spacing: 0.1em;
+  }
+
+  /* === 카드 === */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .card:hover { border-color: var(--yellow); transform: translateY(-3px); }
+
+  /* === Footer === */
+  footer { padding: 60px 24px; text-align: center; color: var(--text-dim); font-size: 13px; }
+  footer .y { color: var(--yellow); }
+
+  /* === 모바일 === */
+  @media (max-width: 640px) {
+    .hero { padding: 80px 20px 60px; }
+    section { padding: 60px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="container">
+    <span class="badge">{{BADGE}}</span>
+    <h1>{{HEADLINE}}<br /><span class="accent">{{HEADLINE_ACCENT}}</span></h1>
+    <p class="lede">{{LEDE}}</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-num">01 / SECTION</div>
+    <h2>{{SECTION_TITLE}}</h2>
+    <!-- content -->
+  </div>
+</section>
+
+<footer>
+  <p>{{FOOTER}}</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* 흑백 모노톤 — 바이브코딩 1원칙: 빈 캔버스에서 시작. */
+:root {
+  --bg: #ffffff;
+  --bg-soft: #fafafa;
+  --bg-card: #f5f5f5;
+  --line: rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.16);
+  --text: #0a0a0a;
+  --text-muted: #525252;
+  --text-dim: #a3a3a3;
+  --accent: #0a0a0a;
+}

@@ -1,0 +1,13 @@
+/* 네이버 블로그 톤 — 따뜻한 베이지 + 진한 검정. 에세이·블로그용. */
+:root {
+  --bg: #fdfaf3;
+  --bg-soft: #f7f1e3;
+  --bg-card: #ffffff;
+  --line: rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.14);
+  --text: #1a1a1a;
+  --text-muted: #5a5a5a;
+  --text-dim: #888888;
+  --accent: #2d5016;     /* 깊은 녹색 — 차분 */
+  --accent-warm: #c9763d; /* 따뜻한 오렌지 — 강조 */
+}
